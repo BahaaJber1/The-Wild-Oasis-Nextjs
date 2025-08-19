@@ -8,9 +8,9 @@ export default function Page() {
 		<main className="mt-24">
 			<Image
 				src={bg}
-        fill
-        placeholder="blur"
-        quality={100}
+				fill
+				placeholder="blur"
+				quality={100}
 				className="object-cover object-top"
 				alt="Mountains and forests with two cabins"
 			/>
