@@ -1,12 +1,21 @@
-import { getCabin } from "@/app/_lib/data-service";
+import { getCabin, getCabins } from "@/app/_lib/data-service";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
 //For dynamic metadata we need to export a function called generateMetadata
 export async function generateMetadata({ params }) {
-	const { name } = await getCabin(params.cabinId);
+	const { cabinId } = await params;
+	const { name } = await getCabin(cabinId);
 	return { title: `Cabin ${name}` };
+}
+
+// For SSG we need to tell nextjs what are the possible values for cabinId it should match the dynamic segment
+export async function generateStaticParams() {
+	const cabins = await getCabins();
+	return cabins.map((cabin) => ({
+		cabinId: String(cabin.id),
+	}));
 }
 
 // For segment pages it get the params as props so we could get the cabinId
