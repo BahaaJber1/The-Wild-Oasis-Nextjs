@@ -6,6 +6,8 @@ export const metadata = {
 	title: "Cabins",
 };
 
+export const revalidate = 3600; // 0 = disable caching
+
 export default function Page() {
 	return (
 		<div>

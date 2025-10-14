@@ -1,7 +1,11 @@
 import CabinCard from "@components/CabinCard";
 import { getCabins } from "@lib/data-service";
+// import { unstable_noStore as noStore } from "next/cache"; // the old way
+// import { connection } from "next/server";
 
 async function CabinList() {
+	// noStore();
+	// await connection(); // the new way
 	const cabins = await getCabins();
 
 	if (!cabins.length) return null;
