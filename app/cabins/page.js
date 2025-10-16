@@ -2,6 +2,7 @@ import CabinList from "@components/CabinList";
 import Spinner from "@components/Spinner";
 import { Suspense } from "react";
 import Filter from "@components/Filter";
+import ReservationReminder from "@components/ReservationReminder";
 
 export const metadata = {
 	title: "Cabins",
@@ -35,6 +36,7 @@ export default async function Page({ searchParams }) {
 
 			<Suspense fallback={<Spinner />} key={filter}>
 				<CabinList filter={filter} />
+				<ReservationReminder />
 			</Suspense>
 		</div>
 	);
