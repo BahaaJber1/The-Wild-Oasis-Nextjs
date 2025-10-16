@@ -15,7 +15,7 @@ export async function getCabin(id) {
 	// await new Promise((res) => setTimeout(res, 1000));
 
 	if (error) {
-		console.error(error);
+		throw new Error("Cabin could not be loaded");
 	}
 
 	return data;
@@ -110,7 +110,6 @@ export async function getBookedDatesByCabinId(cabinId) {
 	// await new Promise((res) => setTimeout(res, 5000));
 
 	if (error) {
-		console.error(error);
 		throw new Error("Bookings could not get loaded");
 	}
 
