@@ -3302,6 +3302,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-day-picker@npm:8":
+  version: 8.10.1
+  resolution: "react-day-picker@npm:8.10.1"
+  peerDependencies:
+    date-fns: ^2.28.0 || ^3.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/a0ff28c4b61b3882e6a825b19e5679e2fdf3256cf1be8eb0a0c028949815c1ae5a6561474c2c19d231c010c8e0e0b654d3a322610881e0655abca05a2e03d9df
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:19.1.0":
   version: 19.1.0
   resolution: "react-dom@npm:19.1.0"
@@ -3867,6 +3877,7 @@ __metadata:
     eslint-config-next: "npm:15.5.4"
     next: "npm:15.5.4"
     react: "npm:19.1.0"
+    react-day-picker: "npm:8"
     react-dom: "npm:19.1.0"
     tailwindcss: "npm:^4"
   languageName: unknown
