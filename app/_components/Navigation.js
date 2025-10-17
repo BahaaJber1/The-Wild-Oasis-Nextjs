@@ -3,7 +3,6 @@ import { auth } from "@lib/auth";
 
 export default async function Navigation() {
 	const session = await auth();
-	console.log(session);
 
 	return (
 		<nav className="z-10 text-xl">
@@ -36,7 +35,7 @@ export default async function Navigation() {
 								referrerPolicy="no-referrer"
 								className="h-8 rounded-full"
 							/>
-							<span>{session.user.name}</span>
+							<span>Guest area</span>
 						</Link>
 					) : (
 						<Link
