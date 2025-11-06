@@ -70,8 +70,8 @@ function ReservationCard({ booking }) {
 				</div>
 			</div>
 
-			<div className="flex flex-col border-l border-primary-800 w-[100px]">
-				{!isPast(startDate) ? (
+			{!isPast(startDate) ? (
+				<div className="flex flex-col border-l border-primary-800 w-[100px]">
 					<>
 						<Link
 							href={`/account/reservations/edit/${id}`}
@@ -82,8 +82,8 @@ function ReservationCard({ booking }) {
 						</Link>
 						<DeleteReservation bookingId={id} />
 					</>
-				) : null}
-			</div>
+				</div>
+			) : null}
 		</div>
 	);
 }
