@@ -77,6 +77,9 @@ export async function updateGuest(formData) {
 }
 
 export async function deleteReservation(bookingId) {
+	// await new Promise((resolve) => setTimeout(resolve, 2000));
+	// throw new Error("Simulated deletion error");
+	
 	const session = await auth();
 
 	if (!session) {
